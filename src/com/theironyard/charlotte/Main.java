@@ -1,52 +1,47 @@
 package com.theironyard.charlotte;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Person> people = new ArrayList<>();
-
-        people.add(new Person("Ben"));
-        people.add(new Person("Jake"));
-        people.add(new Person("Jarad"));
-        people.add(new Person("Daniel"));
-        people.add(new Person("Keith"));
+        String[] names = new String[3];
+        String[] heights = new String[3];
 
 
-        System.out.println("What name are you looking for?");
-        String enteredName = new Scanner(System.in).nextLine();
+//        names[0] = "Alice";
+//        heights[0] = "5' 10\"";
+//        names[1] = "Bob";
+//        heights[1] = "2' 00\"";
+//        names[2] = "Charlie";
+//        heights[2] = "6' 1\"";
+//        names[3] = "Dan";
+//        heights[3] = "5' 4\"";
 
+        // for loop
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println("Hello From For Loop");
+//        }
+//
+//        // for each loop
+//        for(String name : names) {
+//            System.out.println(name);
+//        }
 
-        boolean found = false;
-        // GOAL: See if a person in "names" has the name
-        // we entered in
+        // while loop
+//        int i = 0;
+//        while (i < 5) {
+//            System.out.println("Hello");
+//        }
+        // do while loop
+        Person examplePerson = new Person("Ben");
 
-        // looping through names
-        for (int i = 0;i < people.size();i++) {
-            Person currentPerson = people.get(i);
+        Event e = new Event(3, "Time Warner Arena");
 
-            // comparing the name of each person to the name we entered.
-            if (currentPerson.getName().equals(enteredName)) {
-                found = true;
-                break;
-            }
+        Scanner inputScanner = new Scanner(System.in);
+
+        while (true) {
+            e.addRegistration(inputScanner.nextLine());
         }
-
-        if (found) {
-            System.out.println("You found " + enteredName + "!");
-        } else {
-            System.out.println("Better luck next time hombre");
-        }
-    }
-
-    public double areaOfCircle(double r) {
-        // / * - +
-        return 3.14 * r * r;
-    }
-
-    public double getYFromLine(double m, double x, double b) {
-        return (m * x) + b;
     }
 }
