@@ -1,13 +1,13 @@
 package com.theironyard.charlotte;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
     public static void main(String[] args) {
-        String[] names = new String[3];
-        String[] heights = new String[3];
-
+//        String[] names = new String[3];
+//        String[] heights = new String[3];
 
 //        names[0] = "Alice";
 //        heights[0] = "5' 10\"";
@@ -34,14 +34,38 @@ public class Main {
 //            System.out.println("Hello");
 //        }
         // do while loop
-        Person examplePerson = new Person("Ben");
+//        Person examplePerson = new Person("Ben");
+//
+//        Event e = new Event(3, "Time Warner Arena");
+//
+//        Scanner inputScanner = new Scanner(System.in);
+//
+//        while (true) {
+//            e.addRegistration(inputScanner.nextLine());
+//        }
 
-        Event e = new Event(3, "Time Warner Arena");
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Charlie");
+        names.add("Alice");
+        names.add("Bob");
 
-        Scanner inputScanner = new Scanner(System.in);
+        Collections.sort(names);
 
-        while (true) {
-            e.addRegistration(inputScanner.nextLine());
+        for (String name : names) {
+            System.out.println(name);
         }
+
+        ArrayList<Person> people = new ArrayList<>();
+        people.add(new Person("Alice", 10));
+        people.add(new Person("Charlie", 15));
+        people.add(new Person("Bob", 7));
+
+        Collections.sort(people);
+
+        for (Person person : people) {
+            System.out.println(person);
+        }
+
+
     }
 }
